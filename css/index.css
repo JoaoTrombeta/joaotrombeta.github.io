@@ -4,16 +4,19 @@ body{
 header{
     width: 100%;
     height: 10vh;
+    background-color: brown;
 }
 footer{
     width: 100%;
     height: 5vh;
+    background-color: brown;
 }
 main{
     width: 100%;
     height: 85vh;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 .sectionLateral{
     width: 15vw;
@@ -29,15 +32,17 @@ main{
     top: 15vh;
     left: 45vw;
     right: 45vw;
+    transition: ease-in-out 1s;
 }
 .Curriculo{
     width: 85vw;
     height: 85vh;
-    overflow: hidden;
+    overflow-y: scroll;
 
     .CurriculoContent{
+        padding-top: 25vh;
         width: 100%;
-        min-height: 100%;
+        min-height: 100vh;
         background-color: aqua;
     }
 }
