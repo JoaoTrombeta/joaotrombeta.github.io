@@ -27,6 +27,11 @@ main{
     display: flex;
     background-color: blueviolet;
     transition: ease-in-out 1s;
+    .first-item{
+        margin-top: 26vh;
+        width: 100%;
+        text-align: center;
+    }
 }
 .foto{
     width: 10vw;
@@ -52,6 +57,7 @@ main{
         }
         .foto2{
             z-index: 1;
+            filter: opacity(0);
         }
     }
 }
