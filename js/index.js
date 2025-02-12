@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const main = document.getElementById('main')
     const footer = document.getElementById('footer')
     const menuLateral = document.getElementById('lateral')
+    const fotoPerfil = document.getElementById('fotoPerfil')
+
     
     curriculo.addEventListener('scroll', e => {
         console.log(curriculo.scrollTop)
@@ -18,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             footer.style.height = "0vh"
             
+            fotoPerfil.style.filter = "opacity(0)"
+            
             foto.style.top = "5vh"
             foto.style.left = "2.5vw"
             foto.style.borderRadius = "15vh"
@@ -30,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.height = "10vh"
             
             footer.style.height = "5vh"
+            
+            fotoPerfil.style.filter = "opacity(1)"
 
             foto.style.top = "15vh"
             foto.style.left = "45vw"

@@ -39,9 +39,20 @@ main{
     transition: ease-in-out 1s;
     overflow: hidden;
     border-radius: 5px;
-    img{
-        max-width: 10vw;
-        max-height: 10vw;
+    picture{
+        position: relative;
+        .fotos{
+            max-width: 10vw;
+            max-height: 10vw;
+            transition: ease-in-out 1s;
+        }
+        .foto1{
+            z-index: 2;
+            position: absolute;
+        }
+        .foto2{
+            z-index: 1;
+        }
     }
 }
 .Curriculo{
