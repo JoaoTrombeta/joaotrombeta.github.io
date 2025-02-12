@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             header.style.height = "10vh"
             
-            footer.style.height = "10vh"
+            footer.style.height = "5vh"
 
             foto.style.top = "15vh"
             foto.style.left = "45vw"
-            foto.style.borderRadius = "0px"
+            foto.style.borderRadius = "5px"
         }
     })
 })
