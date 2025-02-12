@@ -31,6 +31,8 @@ main{
         margin-top: 26vh;
         width: 100%;
         text-align: center;
+        text-decoration: none;
+        cursor: pointer;
     }
 }
 .foto{
