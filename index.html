@@ -9,7 +9,9 @@
     <script src='js/index.js'></script>
 </head>
 <body>
-    <header id="header"></header>
+    <header id="header">
+
+    </header>
     <main id="main">
         <div class="foto" id="myfoto">
             <picture>
@@ -18,13 +20,31 @@
             </picture>
         </div>
         <section class="sectionLateral" id="lateral">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joaotrombetadev@gmail.com" class="first-item" target="_blank">
+            <h1 class="first-item"> Informações Basicas </h1>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joaotrombetadev@gmail.com" target="_blank">
                 <p class="Email">joaotrombetadev@gmail.com</p>
             </a>
         </section>
         <section class="Curriculo" id="curriculo">
             <article class="CurriculoContent">
-                <h1 class="titulo">Teste do Primeiro Conteúdo</h1>
+                <h1 class="titulo" onclick="abreContent('divHistoria','abreHistoria')"><span id="abreHistoria">></span> Sobre Mim</h1>
+                <div id="divHistoria" class="textContent">
+                    <p>Olá, sou o João, tenho atualmente <span id="minhaIdade"></span> anos, gosto de programar, ver séries e jogar, sou uma pessoa calma, sociável, que tem a mente aberta e que se adapta bem à diversas situações.</p>
+                </div>
+                <h1 class="titulo" onclick="abreContent('HistAcademico','Academico')"><span id="Academico">></span> Experiência Profissional</h1>
+                <div id="HistAcademico" class="textContent">
+                    <h2>Resumo sobre minha parte acadêmica</h2>
+
+                    <h1 class="titulo" onclick="abreContent('Fundamental','divFundamental')"><span id="divFundamental">></span> Experiência Profissional</h1>
+                    <div id="Fundamental" class="textContent">
+                        <p>Formado no ensino fundamental na Escola Estadual Monsenhor Sarrion, estudando durante o seguinte período</p>
+                        <p>2018 à 2020 </p>
+                    </div>
+                </div>
+                <h1 class="titulo" onclick="abreContent('Projetos','TittleProjetos')"><span id="TittleProjetos">></span> Experiência Profissional</h1>
+                <div id="Projetos" class="textContent">
+                    <p>Aqui colocarei alguns dados pessoais e um pouco sobre mim</p>
+                </div>
             </article>
         </section>
     </main>

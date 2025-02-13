@@ -25,14 +25,21 @@ main{
     width: 0vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     background-color: blueviolet;
     transition: ease-in-out 1s;
+    *{
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+    }
     .first-item{
         margin-top: 26vh;
         width: 100%;
         text-align: center;
         text-decoration: none;
         cursor: pointer;
+        margin-bottom: 5px;
     }
 }
 .foto{
@@ -80,6 +87,20 @@ main{
             font-weight: 1000;
             width: 100%;
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            span{
+                transition: ease-in-out 0.5s;
+                transform: rotate(90deg);
+                margin-right: 5px;
+            }
+        }
+        .textContent{
+            height: fit-content;
+            width: 100%;
+            overflow: hidden;
         }
     }
 }

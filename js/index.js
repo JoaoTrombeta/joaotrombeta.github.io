@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fotoPerfil.style.filter = "opacity(0)"
             fotoPerfil2.style.filter = "opacity(1)"
             
-            foto.style.top = "5vh"
+            foto.style.top = "2.5vh"
             foto.style.left = "4vw"
             foto.style.borderRadius = "15vh"
         }else if(curriculo.scrollTop < 100){
@@ -45,4 +45,31 @@ document.addEventListener('DOMContentLoaded', () => {
             foto.style.borderRadius = "5px"
         }
     })
+    calcIdade()
 })
+
+function abreContent(id, idClick) {
+    const elemento = document.getElementById(id)
+    const ClickElement = document.getElementById(idClick)
+
+    if(elemento.style.height == "fit-content" || elemento.style.height == ""){
+        elemento.style.height = "0px"
+        ClickElement.style.transform = "rotate(0deg)"
+    }else{
+        elemento.style.height = "fit-content"
+        ClickElement.style.transform = "rotate(90deg)"
+    }
+}
+
+function calcIdade() {
+    var DataAtual = new Date()
+    var anoAtual = DataAtual.getFullYear()
+    var mesAtual = DataAtual.getMonth()
+    var diaAtual = DataAtual.getDate()
+    const idade = document.getElementById('minhaIdade')
+    if(diaAtual >= 3 && mesAtual >= 8){
+        idade.innerText = anoAtual - 2005
+    }else{
+        idade.innerText = anoAtual - 2005 - 1
+    }
+}
