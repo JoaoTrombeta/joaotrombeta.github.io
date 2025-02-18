@@ -28,6 +28,7 @@ main{
     flex-direction: column;
     background-color: blueviolet;
     transition: ease-in-out 1s;
+    box-shadow: 10px 0px 15px 0px #383838;
     *{
         width: 100%;
         text-decoration: none;
@@ -102,5 +103,27 @@ main{
             width: 100%;
             overflow: hidden;
         }
+    }
+}
+h3{
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+p{
+    margin: 0px;
+}
+.text-left{
+    width: 100%;
+    text-align: left;
+}
+
+.iconRow{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    img{
+        max-width: 20px;
+        max-height: 20px;
     }
 }
