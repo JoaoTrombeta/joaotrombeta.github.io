@@ -12,22 +12,26 @@ document.addEventListener('DOMContentLoaded', () => {
     curriculo.addEventListener('scroll', e => {
         console.log(curriculo.scrollTop)
         if(curriculo.scrollTop > 50){
-            main.style.height = "100vh"
-            curriculo.style.height = "100vh"
-            curriculo.style.width = "82vw"
-            menuLateral.style.width = "18vw"
-            
-            header.style.height = "0vh"
-            
-            footer.style.height = "0vh"
-            
-            fotoPerfil.style.filter = "opacity(0)"
-            fotoPerfil2.style.filter = "opacity(1)"
-            
-            foto.style.top = "2.5vh"
-            foto.style.left = "4vw"
-            foto.style.borderRadius = "15vh"
-        }else if(curriculo.scrollTop < 100){
+            menuLateral.style.display = "flex"
+            setTimeout(() => {
+                
+                main.style.height = "100vh"
+                curriculo.style.height = "100vh"
+                curriculo.style.width = "82vw"
+                menuLateral.style.width = "18vw"
+                
+                header.style.height = "0vh"
+                
+                footer.style.height = "0vh"
+                
+                fotoPerfil.style.filter = "opacity(0)"
+                fotoPerfil2.style.filter = "opacity(1)"
+                
+                foto.style.top = "2.5vh"
+                foto.style.left = "4vw"
+                foto.style.borderRadius = "15vh"
+            }, 50);
+        }else if(curriculo.scrollTop < 50){
             main.style.height = "85vh"
             curriculo.style.width = "100vw"
             curriculo.style.height = "85vh"
@@ -39,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             fotoPerfil.style.filter = "opacity(1)"
             fotoPerfil2.style.filter = "opacity(0)"
+            menuLateral.style.overflow = "hidden"
 
             foto.style.top = "15vh"
             foto.style.left = "45vw"

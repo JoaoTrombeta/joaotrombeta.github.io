@@ -26,9 +26,10 @@ main{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
     transition: ease-in-out 1s;
-    box-shadow: 10px 0px 15px 0px #383838;
+    box-shadow: 10px 0px 25px 0px #383838;
+    position: relative;
+    overflow: hidden;
     *{
         width: 100%;
         text-decoration: none;
@@ -42,6 +43,9 @@ main{
         cursor: pointer;
         margin-bottom: 5px;
     }
+    a{
+        margin-bottom: 20px;
+    }
 }
 .foto{
     width: 10vw;
@@ -54,6 +58,7 @@ main{
     transition: ease-in-out 1s;
     overflow: hidden;
     border-radius: 5px;
+    z-index: 99;
     picture{
         position: relative;
         .fotos{
@@ -76,32 +81,60 @@ main{
     height: 85vh;
     overflow-y: scroll;
     transition: ease-in-out 1s;
-
+    
     .CurriculoContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-top: 25vh;
         width: 100%;
         min-height: 100vh;
         background-color: aqua;
-
-        .titulo{
-            font-size: 25px;
-            font-weight: 1000;
+        
+        .content{
+            margin-top: 30px;
             width: 100%;
-            text-align: center;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
+            min-height: 20vh;
+            height: 20vh;
+            max-height: fit-content;
+            background-color: white;
+            box-shadow: 10px 10px 15px 0px #383838;
+            display: grid;
+            border-radius: 20px;
+            column-gap: 5%;
+            grid-template-columns: 30% 65%;
+            grid-template-rows: 100%;
+            overflow: hidden;
 
-            span{
-                transition: ease-in-out 0.5s;
-                transform: rotate(90deg);
-                margin-right: 5px;
+            img{
+                max-width: 100%;
+                width: 25vh;
+            }
+            
+            .titulo{
+                font-size: 25px;
+                font-weight: 1000;
+                width: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                
+                span{
+                    transition: ease-in-out 0.5s;
+                    transform: rotate(90deg);
+                    margin-right: 5px;
+                }
+            }
+            .textContent{
+                height: fit-content;
+                width: 100%;
+                overflow: hidden;
             }
         }
-        .textContent{
-            height: fit-content;
-            width: 100%;
-            overflow: hidden;
+        .content:nth-child(even){
+            display: grid;
+            direction: rtl;
         }
     }
 }
