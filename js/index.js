@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 foto.style.left = "4vw"
                 foto.style.borderRadius = "15vh"
             }, 50);
-        }else if(curriculo.scrollTop < 50){
+        }else if(curriculo.scrollTop < 100){
             main.style.height = "85vh"
             curriculo.style.width = "100vw"
             curriculo.style.height = "85vh"
@@ -51,6 +51,66 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
     calcIdade()
+
+
+
+
+
+
+    // Seleciona o elemento pelo ID ou qualquer outro seletor
+    let scrollPosition = 0;
+let container = document.getElementById('projetos');
+
+// Função que anima a rolagem suave
+function animateScroll(targetPosition) {
+    const curriculo = document.getElementById('curriculo')
+  let startPosition = container.scrollLeft; // Posição inicial do scroll
+  let startTime = performance.now(); // Tempo de início da animação
+
+  // Função de animação usando requestAnimationFrame
+  function scrollAnimation(currentTime) {
+    let elapsedTime = currentTime - startTime;
+    let progress = elapsedTime / 500; // Tempo total para a animação (500ms aqui)
+
+    // Limita o progresso a 1 (100%)
+    if (progress > 1) progress = 1;
+
+    // Calcula o valor da rolagem atual com base na animação
+    let currentScroll = startPosition + (targetPosition - startPosition) * progress;
+
+    // Aplica o scroll no contêiner
+    container.scrollLeft = currentScroll;
+
+    // Se a animação ainda não terminou, continua chamando requestAnimationFrame
+    if (progress < 1) {
+      requestAnimationFrame(scrollAnimation);
+    }
+  }
+
+  // Inicia a animação
+  requestAnimationFrame(scrollAnimation);
+}
+
+// Função que faz a rolagem suave a cada intervalo
+function autoScroll() {
+  // Calcula 25% do scrollWidth (largura total do conteúdo)
+  const scrollAmount = curriculo.scrollWidth * 0.25;
+
+  // Verifica se a rolagem chegou ao final do elemento
+  if (scrollPosition + scrollAmount >= container.scrollWidth || scrollPosition + scrollAmount >= "100%") {
+    // Se chegou ao final, volta ao início com animação
+    animateScroll(0);
+    scrollPosition = 0; // Reseta a posição de rolagem
+  } else {
+    // Caso contrário, rola 25% a mais com animação
+    animateScroll(scrollPosition + scrollAmount);
+    scrollPosition += scrollAmount; // Atualiza a posição de rolagem
+  }
+}
+
+// Define o intervalo para rolar automaticamente a cada 3 segundos (3000ms)
+setInterval(autoScroll, 3000); // Ajuste o tempo de intervalo conforme necessário
+
 })
 
 function abreContent(id, idClick) {
