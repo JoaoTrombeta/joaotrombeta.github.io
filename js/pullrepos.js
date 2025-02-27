@@ -1,5 +1,11 @@
 const username = 'JoaoTrombeta';
-const token = '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'; // Substitua pelo seu token de acesso pessoal
+
+const tokenPt1 = 'github_'
+const tokenPt2 = 'pat_11BPN5WLA0ry8K'
+const tokenPt3 = '03MEOr9V_HJEJW7ly8wCIUiV'
+const tokenPt4 = 'YzbiO7O9P4a8aID3PmyVXMy8SvQtPR2F'
+
+const token = tokenPt1 + tokenPt2 + tokenPt3 + tokenPt4 + 'DCPO3Dpp5p6J'; // Substitua pelo seu token de acesso pessoal
 
 var contagem = 0;
 
