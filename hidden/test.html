@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Globo Giratório</title>
+<style>
+    body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    }
+
+    #globeViz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    }
+</style>
+<!-- Importa Three.js e Globe.gl -->
+<script src="https://unpkg.com/three"></script>
+<script src="https://unpkg.com/globe.gl"></script>
+</head>
+<body>
+<div id="globeViz"></div>
+
+<script>
+    const world = Globe()
+    .globeImageUrl('https://unpkg.com/three-globe@2.42.4/example/img/earth-day.jpg')
+    .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+    .backgroundColor('#000000')
+    .showAtmosphere(true)
+    .atmosphereColor('#3a228a')
+    .atmosphereAltitude(0.25)
+    (document.getElementById('globeViz'));
+
+    // Animação de rotação automática
+    let angle = 0;
+    setInterval(() => {
+    angle += 0.002;
+    world.controls().autoRotate = false;
+    world.pointOfView({ lat: 0, lng: angle * 180 / Math.PI }, 0);
+    }, 16); // ~60fps
+</script>
+</body>
+</html>
