@@ -3,29 +3,70 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Menu Principal</title>
+    <title>Currículo Trombeta</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/index.css'>
     <script src='js/index.js'></script>
-    <script src='../js/space.js'></script>
+    <script src='js/pullrepos.js'></script>
 </head>
 <body>
-    <header>
-        <h1>Menu</h1>
+    <header id="header">
+        
     </header>
-    <main>
-        <canvas id="space"></canvas>
-        <section class="scroll" id="scroll">
-            <section class="row">
-                <a href="SobreMim/"><div class="mini-card"> Sobre Mim </div></a>
-                <a href="dados/"><div class="mini-card"> Dados Pessoais </div></a>
-                <a href="Projetos/dev.html"><div class="mini-card">Projetos (W.I.P)</div></a>
-            </section>
-            <a href="curriculo/"><div class="card">Meu Currículo</div></a>
+    <main id="main">
+        <div class="foto" id="myfoto">
+            <picture>
+                <img src="images/fotoTeste.png" alt="FotoPerfil" id="fotoPerfil" class="fotos foto1">
+                <img src="images/pombo2.png" alt="foto2" id="fotoPerfil2" class="fotos foto2">
+            </picture>
+        </div>
+        <section class="sectionLateral" id="lateral">
+            <h1 class="first-item"> Informações Basicas </h1>
+            <h3 class="text-left">Meu E-mail:</h3>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joaotrombetadev@gmail.com" target="_blank">
+                <div class="iconRow">
+                    <img src="images/envelope.png" alt="GithubLogo">
+                    <p class="Email">joaotrombetadev@gmail.com</p>
+                </div>
+            </a>
+            <h3 class="text-left">Telefone:</h3>
+            <div class="iconRow">
+                <p>+55 (18) 99670-0288</p>
+            </div>
+            <h3 class="text-left">Github:</h3>
+            <a href="https://github.com/JoaoTrombeta"><div class="iconRow"><img src="images/github.png" alt="GithubLogo"><p>JoaoTrombeta</p></div></a>
+        </section>
+        <section class="Curriculo" id="curriculo">
+            <article class="CurriculoContent">
+                <div class="content">
+                    <img src="images/fotoTeste.png" alt="img-conteudo">
+                    <div id="divHistoria" class="textContent">
+                        <h1 class="titulo">Apresentação</h1>
+                        <p>Olá, sou o João, tenho atualmente <span id="minhaIdade"></span> anos, gosto de programar, ver séries e jogar, me considero uma pessoa calma, sociável, que tem a mente aberta e que se adapta bem à diversas situações.</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <img src="images/fotoTeste.png" alt="img-conteudo">
+                    <div id="divHistoria" class="textContent">
+                        <h1 class="titulo">Sobre Mim</h1>
+                        <p>Sou o João Vitor Trombeta, apaixonado por Engenharia e Desenvolvimento Web. Tenho experiência em Desenvolvimento Web, conhecimento Básico em Redes, e alguns conhecimentos mínimos à básicos em diversas áreas, e estou sempre em busca de novos desafios e aprendizados. Sou uma pessoa Calma e relativamente agitada, que adora trabalhar em equipe e resolver problemas. Fora do trabalho, gosto de Jogar, passar um tempo em família, e as vezes programar. Estou sempre aberto a novas conexões!</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <img src="images/fotoTeste.png" alt="img-conteudo">
+                    <div id="divHistoria" class="textContent">
+                        <h1 class="titulo">Sobre Mim</h1>
+                        <p>Olá, sou o João, tenho atualmente <span id="minhaIdade"></span> anos, gosto de programar, ver séries e jogar, sou uma pessoa calma, sociável, que tem a mente aberta e que se adapta bem à diversas situações.</p>
+                    </div>
+                </div>
+                <section id="pre-projetos" class="pre-projetos">
+                    <section id="projetos" class="carrossel-projetos">
+                        <div class="card"></div>
+                    </section>
+                </section>
+            </article>
         </section>
     </main>
-    <footer>
-
-    </footer>
+    <footer id="footer"></footer>
 </body>
 </html>
